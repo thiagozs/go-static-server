@@ -18,8 +18,8 @@ COPY --from=builder /go/src/app/server .
 COPY --from=builder /go/src/app/assets assets
 COPY --from=builder /go/src/app/public public
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["./server", "--hostport", ":8080"]
+CMD ["./server", "--hostport", ":80"]
 
 
